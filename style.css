@@ -1,3 +1,41 @@
-p {
-  background-color: blue;
+.inserir-texto {
+  display: inline-block;
+  position: relative;
+  width: 70%;
+  margin: 5px;
+}
+
+.texto {
+  width: 99%;
+  height: 500px;
+  border-color: red;
+}
+
+.botão {
+  width: 100%;
+}
+
+#botão-1 {
+  width: 50%;
+}
+
+#botão-2 {
+  width: 49%;
+}
+
+.resultado {
+  display: inline-block;
+  position: relative;
+  width: 28%;
+}
+
+#imagem {
+height: 100%;
+width: auto;
+right: 0;
+text-align: center;
+}
+
+h2 {
+  text-align: center;
 }
