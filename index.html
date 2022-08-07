@@ -1,8 +1,10 @@
-<!DOCTYPEhtml >
+<!DOCTYPEhtml>
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <title>Programa Decodificador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
@@ -10,14 +12,16 @@
 
     </header>
     <main>
-      <div>
-        <textarea required style="height: 200px;" required></textarea>
-        <input type="submit" value="Criptografar">
-        <input type="submit" value="Descriptografar">
+      <div class="inserir-texto">
+        <textarea class="texto"></textarea>
+        <div class="botão">
+          <input type="submit" value="Criptografar" class="botão-principal" id="botão-1">
+          <input type="submit" value="Descriptografar" class="botão-principal" id="botão-2">
+        </div>
 
       </div>
-      <div>
-        <h2><img src="Nenhuma-mensagem.png" alt="Imagem Nehuma mensagem encontrada"></h2>
+      <div class="resultado">
+        <h2><img src="Nenhuma-mensagem.png" alt="Imagem Nehuma mensagem encontrada" id="imagem"></h2>
       </div>
     </main>
     <footer>
@@ -27,3 +31,5 @@
       <p>Instagran</p>
     </footer>
   </body>
+
+</html>
