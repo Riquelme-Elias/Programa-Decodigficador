@@ -11,6 +11,10 @@
   border-color: red;
 }
 
+.texto::placeholder {
+    color: #0A3871;
+}
+
 .botão {
   width: 100%;
 }
