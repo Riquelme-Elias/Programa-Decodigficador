@@ -38,7 +38,7 @@ function criptografarTexto(texto){
       texto[i] = "ober";
     }
     if(texto[i] == "u"){
-      texto[i] = "ufate";
+      texto[i] = "ufat";
     }
   }
   return texto;
