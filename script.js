@@ -1,34 +1,53 @@
 function criptografar() {
-  var texto = document.getElementById("texto_digitado").value;
-  texto = texto.toLowerCase();
-  var cript = [];
-    for(var i = 0; i < texto.length; i++){
-      cript.push(texto.charAt(i));
+  var textoDigitado = document.getElementById("texto_digitado").value;
+  textoDigitado = textoDigitado.toLowerCase();
+  var textoArray = [];
+  textoArray = transformaStringEmArray(textoDigitado);
+  textoArray = criptografarTexto(textoArray);
+
+
+    console.log(textoArray);
+
+    textoDigitado = transformaArrayEmString(textoArray);
+
+    var escreveNaTela = document.getElementById("escreve");
+    escreveNaTela.innerHTML = textoDigitado;
+    console.log(textoDigitado);
+}
+
+function transformaStringEmArray(texto){
+  var textoArray = [];
+  for(var i = 0; i < texto.length; i++){
+    textoArray.push(texto.charAt(i));
+  }
+  return textoArray;
+}
+
+function criptografarTexto(texto){
+  for (var i = 0; i < texto.length; i++){
+    if(texto[i] == "e"){
+      texto[i] = "enter";
     }
-    for (var i = 0; i < cript.length; i++){
-      if(cript[i] == "e"){
-        cript[i] = "enter";
-      }
-      if(cript[i] == "i"){
-        cript[i] = "imes";
-      }
-      if(cript[i] == "a"){
-        cript[i] = "ai";
-      }
-      if(cript[i] == "o"){
-        cript[i] = "ober";
-      }
-      if(cript[i] == "u"){
-        cript[i] = "ufate";
-      }
+    if(texto[i] == "i"){
+      texto[i] = "imes";
     }
-    console.log(cript);
-    //var criptString = cript.toString();
-    var criptString = "";
-    for(var m in cript){
-      criptString = criptString.concat(cript[m]);
+    if(texto[i] == "a"){
+      texto[i] = "ai";
     }
-    var escreve = document.getElementById("escreve");
-    escreve.innerHTML = criptString;
-    console.log(criptString);
+    if(texto[i] == "o"){
+      texto[i] = "ober";
+    }
+    if(texto[i] == "u"){
+      texto[i] = "ufate";
+    }
+  }
+  return texto;
+}
+
+function transformaArrayEmString(texto){
+  var textoCriptografado = "";
+  for(var m in texto){
+    textoCriptografado = textoCriptografado.concat(texto[m]);
+  }
+  return textoCriptografado;
 }

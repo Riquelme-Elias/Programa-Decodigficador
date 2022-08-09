@@ -31,15 +31,20 @@
   display: inline-block;
   position: relative;
   width: 28%;
+  top: auto;
 }
 
-#imagem {
+/*#imagem {
 height: 100%;
 width: auto;
 right: 0;
 text-align: center;
-}
+}*/
 
 h2 {
+  text-align: center;
+}
+
+p {
   text-align: center;
 }
