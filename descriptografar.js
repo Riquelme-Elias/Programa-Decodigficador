@@ -3,15 +3,22 @@ function descripitografar(){
   textoDigitado = textoDigitado.toLowerCase();
   var textoArray = [];
   textoArray = transformaStringEmArray(textoDigitado);
-  console.log(textoArray);
-  textoArray = descriptografaTexto(textoArray);
 
-  console.log(textoArray);
-  textoDigitado = transformaArrayEmString(textoArray);
+  if(textoArray.length == 0){
+    var limpa = document.getElementById("escreve");
+    limpa.innerHTML = "";
+    var img = document.querySelector("#escreve");
+    img.innerHTML = "<img src='Nenhuma-mensagem.png'>";
+    console.log("vazio");
+  }else{
 
-  var escreveNaTela = document.getElementById("escreve");
-  escreveNaTela.innerHTML = textoDigitado;
-  console.log(textoDigitado);
+    textoArray = descriptografaTexto(textoArray);
+    console.log(textoArray);
+    textoDigitado = transformaArrayEmString(textoArray);
+
+    var escreveNaTela = document.getElementById("escreve");
+    escreveNaTela.innerHTML = textoDigitado;
+  }
 }
 
 function transformaStringEmArray(texto){

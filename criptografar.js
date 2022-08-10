@@ -10,19 +10,15 @@ function criptografar() {
     limpa.innerHTML = "";
     var img = document.querySelector("#escreve");
     img.innerHTML = "<img src='Nenhuma-mensagem.png'>";
-    console.log("oi");
+    console.log("vazio");
   }else{
 
-  textoArray = criptografarTexto(textoArray);
-
-
+    textoArray = criptografarTexto(textoArray);
     console.log(textoArray);
-
     textoDigitado = transformaArrayEmString(textoArray);
 
     var escreveNaTela = document.getElementById("escreve");
     escreveNaTela.innerHTML = textoDigitado;
-    console.log(textoDigitado);
   }
 }
 
