@@ -2,7 +2,17 @@ function criptografar() {
   var textoDigitado = document.getElementById("texto_digitado").value;
   textoDigitado = textoDigitado.toLowerCase();
   var textoArray = [];
+
   textoArray = transformaStringEmArray(textoDigitado);
+
+  if(textoArray.length == 0){
+    var limpa = document.getElementById("escreve");
+    limpa.innerHTML = "";
+    var img = document.querySelector("#escreve");
+    img.innerHTML = "<img src='Nenhuma-mensagem.png'>";
+    console.log("oi");
+  }else{
+
   textoArray = criptografarTexto(textoArray);
 
 
@@ -13,6 +23,7 @@ function criptografar() {
     var escreveNaTela = document.getElementById("escreve");
     escreveNaTela.innerHTML = textoDigitado;
     console.log(textoDigitado);
+  }
 }
 
 function transformaStringEmArray(texto){
