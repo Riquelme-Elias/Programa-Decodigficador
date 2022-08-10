@@ -1,3 +1,5 @@
+var textoCrip;
+
 function criptografar() {
   var textoDigitado = document.getElementById("texto_digitado").value;
   textoDigitado = textoDigitado.toLowerCase();
@@ -19,6 +21,11 @@ function criptografar() {
 
     var escreveNaTela = document.getElementById("escreve");
     escreveNaTela.innerHTML = textoDigitado;
+
+    textoCrip = textoDigitado;
+
+    var limpa = document.getElementsByClassName("texto")[0];
+    limpa.value = "";
   }
 }
 

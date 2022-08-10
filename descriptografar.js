@@ -18,6 +18,11 @@ function descripitografar(){
 
     var escreveNaTela = document.getElementById("escreve");
     escreveNaTela.innerHTML = textoDigitado;
+
+    textoCrip = textoDigitado;
+
+    var limpa = document.getElementsByClassName("texto")[0];
+    limpa.value = "";
   }
 }
 

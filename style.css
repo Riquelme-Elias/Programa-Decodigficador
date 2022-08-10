@@ -6,7 +6,7 @@
 
 .texto {
   width: 49%;
-  height: 500px;
+  height: 550px;
   border-color: red;
 }
 
@@ -15,15 +15,20 @@
 }
 
 .botão {
+  display: inline-block;
   width: 100%;
 }
 
 #botão-1 {
-  width: 50%;
+  width: 33%;
 }
 
 #botão-2 {
-  width: 49%;
+  width: 33%;
+}
+
+#copy{
+  width: 33%;
 }
 
 .resultado {
