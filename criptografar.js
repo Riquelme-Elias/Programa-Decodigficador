@@ -1,6 +1,9 @@
 var textoCrip;
 
 function criptografar() {
+  var escreveNaTela = document.getElementById("escreve");
+  escreveNaTela.innerHTML = "";
+
   var textoDigitado = document.getElementById("texto_digitado").value;
   textoDigitado = textoDigitado.toLowerCase();
   var textoArray = [];
@@ -8,18 +11,15 @@ function criptografar() {
   textoArray = transformaStringEmArray(textoDigitado);
 
   if(textoArray.length == 0){
-    var limpa = document.getElementById("escreve");
-    limpa.innerHTML = "";
-    var img = document.querySelector("#escreve");
-    img.innerHTML = "<img src='Nenhuma-mensagem.png'>";
-    console.log("vazio");
+    document.getElementById("imge").style.display = ""
   }else{
 
+    document.getElementById("imge").style.display = "none";
     textoArray = criptografarTexto(textoArray);
     console.log(textoArray);
     textoDigitado = transformaArrayEmString(textoArray);
 
-    var escreveNaTela = document.getElementById("escreve");
+    escreveNaTela = document.getElementById("escreve");
     escreveNaTela.innerHTML = textoDigitado;
 
     textoCrip = textoDigitado;
