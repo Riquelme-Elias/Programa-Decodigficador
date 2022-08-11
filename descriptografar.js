@@ -11,8 +11,10 @@ function descripitografar(){
   if(textoArray.length == 0){
     document.getElementById("imge").style.display = ""
     document.querySelector("#escreve").textContent = "Nenhuma mensagem encontrada";
+    document.querySelector("#copy").style.display = "none";
   }else{
     document.querySelector("#escreve").textContent = "";
+    document.querySelector("#copy").style.display = "";
 
     document.getElementById("imge").style.display = "none";
     textoArray = descriptografaTexto(textoArray);
