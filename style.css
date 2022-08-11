@@ -1,13 +1,12 @@
 body {
   background: #E5E5E5;
-  margin: 4%;
   font-family: 'Montserrat', sans-serif;
   color: #0A3871;
 }
 
 main {
   display: block;
-  margin: 2% 5%;
+  margin: 4% 8%;
   line-height: 1;
 }
 
@@ -143,13 +142,70 @@ p {
 
 footer{
   text-align: center;
-  background: url("bg.jpg");
-  display: none;
+  background: #0A3871;
+  padding: 1em;
 }
 
-@media screen and (max-width: 480px) {
+.rede-social {
+  margin: 1em;
+  cursor: pointer;
+}
+
+#github {
+  background: transparent;
+  background-image: url("imgGitHub.png");
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  top: 75%;
+  width: 50px;
+  height: 50px;
+}
+
+#twitter {
+  background: transparent;
+  background-image: url("imgTwitter.png");
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  top: 75%;
+  width: 50px;
+  height: 50px;
+}
+
+#instagram {
+  background: transparent;
+  background-image: url("imgInstagram.png");
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  top: 75%;
+  width: 50px;
+  height: 50px;
+}
+
+#facebook {
+  background: transparent;
+  background-image: url("imgFacebook.png");
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  top: 75%;
+  width: 50px;
+  height: 50px;
+}
+
+.texto-rodape {
+  color: black;
+}
+
+@media screen and (max-width: 850px) {
   main {
-    margin: 2% 0;
+    margin: 1em;
   }
   .mostra-tela {
     background: none;
@@ -182,6 +238,9 @@ footer{
   }
   #copy {
     top: auto;
+  }
+  footer {
+    margin: 10em 0 0;
   }
 
 }
