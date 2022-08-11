@@ -12,15 +12,16 @@ function criptografar() {
 
   if(textoArray.length == 0){
     document.getElementById("imge").style.display = ""
+    document.querySelector("#escreve").textContent = "Nenhuma mensagem encontrada";
   }else{
+    document.querySelector("#escreve").textContent = "";
+
 
     document.getElementById("imge").style.display = "none";
     textoArray = criptografarTexto(textoArray);
-    console.log(textoArray);
     textoDigitado = transformaArrayEmString(textoArray);
 
-    escreveNaTela = document.getElementById("escreve");
-    escreveNaTela.innerHTML = textoDigitado;
+    document.querySelector("#escreve").textContent = textoDigitado;
 
     textoCrip = textoDigitado;
 

@@ -5,17 +5,20 @@ function descripitografar(){
   var textoDigitado = document.getElementById("texto_digitado").value;
   textoDigitado = textoDigitado.toLowerCase();
   var textoArray = [];
+
   textoArray = transformaStringEmArray(textoDigitado);
 
   if(textoArray.length == 0){
-    document.getElementById("imge").style.display = "";
+    document.getElementById("imge").style.display = ""
+    document.querySelector("#escreve").textContent = "Nenhuma mensagem encontrada";
   }else{
+    document.querySelector("#escreve").textContent = "";
+
     document.getElementById("imge").style.display = "none";
     textoArray = descriptografaTexto(textoArray);
     textoDigitado = transformaArrayEmString(textoArray);
 
-    escreveNaTela = document.getElementById("escreve");
-    escreveNaTela.innerHTML = textoDigitado;
+    document.querySelector("#escreve").textContent = textoDigitado;
 
     textoCrip = textoDigitado;
 
