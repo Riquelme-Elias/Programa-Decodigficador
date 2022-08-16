@@ -29,13 +29,7 @@ function descripitografar(){
   }
 }
 
-function transformaStringEmArray(texto){
-  var textoArray = [];
-  for(var i = 0; i < texto.length; i++){
-    textoArray.push(texto.charAt(i));
-  }
-  return textoArray;
-}
+
 
 function descriptografaTexto(texto){
   for (var i = 0; i < texto.length; i++){
@@ -131,12 +125,4 @@ function descriptografaTexto(texto){
       }
   }
   return texto;
-}
-
-function transformaArrayEmString(texto){
-  var textoCriptografado = "";
-  for(var m in texto){
-    textoCriptografado = textoCriptografado.concat(texto[m]);
-  }
-  return textoCriptografado;
 }
